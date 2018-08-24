@@ -1,0 +1,16 @@
+The original JSON String is: 
+{ 
+	"userId": 1,
+	"id": 1,
+	"title": "sunt aut facere repellat", 
+	"body": "quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit"
+}
+The JSON has     8 objects.
+userId
+1
+id
+1
+title
+sunt aut facere repellat
+body
+quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit
