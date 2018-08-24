@@ -28,7 +28,7 @@ const char *JSON_STRING =
    "\"body\": \"quia et suscipit suscipit recusandae consequuntur "
               "expedita et cum reprehenderit molestiae ut ut quas "
               "totam nostrum rerum est autem sunt rem eveniet architecto"
-"};"
+"}";
 
 /* Program starts here */
 void main()
