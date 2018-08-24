@@ -9,7 +9,7 @@
 *       https://github.com/zserge/jsmn
 *
 *
-* AUTHOR :    Alfredo Valdes (https://github.com/alfredovaldes 
+* AUTHOR :    Alfredo Valdes (https://github.com/alfredovaldes) 
 * START DATE :    24 Aug 2018
 *
 *H*/
