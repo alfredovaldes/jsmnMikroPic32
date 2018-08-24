@@ -9,7 +9,7 @@
 *       https://github.com/zserge/jsmn
 *
 *
-* AUTHOR :    Alfredo Valdes (https://github.com/alfredovaldes) 
+* AUTHOR :    Alfredo Valdes (https://github.com/alfredovaldes 
 * START DATE :    24 Aug 2018
 *
 *H*/
@@ -20,15 +20,7 @@ void mcuInit(void);
 void parseJson(const char *JSON_STRING);
 /* Declare the JSON Objects to use, you must escape the " character */
 const char *JSON_STRING = 
-"{"
-   "\"userId\": 1,"
-   "\"id\": 1,"
-   "\"title\": \"sunt aut facere repellat provident "
-                "occaecati excepturi optio reprehenderit\","
-   "\"body\": \"quia et suscipit suscipit recusandae consequuntur "
-              "expedita et cum reprehenderit molestiae ut ut quas "
-              "totam nostrum rerum est autem sunt rem eveniet architecto"
-"}";
+"{ \n\t \"userId\": 1,\n\t\"id\": 1,\n\t\"title\": \"sunt aut facere repellat\", \n\t\"body\": \"quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit\"\n}";
 
 /* Program starts here */
 void main()
@@ -45,17 +37,12 @@ void mcuInit(){
     RPB14R = 0x2; //Enable UART2 TX Peripheral Pin Select register
     /* These come with mikroC for PIC32 */
     Unlock_IOLOCK();//Unlocks I/O pins for Peripheral Pin Mapping
-    PPS_Mapping_NoLock( _RPG6, _OUTPUT, _U2TX );//Sets desired internal MCU 
-                                                //module to be mapped on 
-                                                //the requested pins.
-    PPS_Mapping_NoLock( _RPB14, _INPUT, _U2RX );//Sets desired internal MCU
-                                                //module to be mapped on
-                                                //the requested pins.
-    Lock_IOLOCK();// Locks I/O pins for Peripheral Pin Mapping.
+    PPS_Mapping_NoLock( _RPG6, _OUTPUT, _U2TX );
+    PPS_Mapping_NoLock( _RPB14, _INPUT, _U2RX );
+    Lock_IOLOCK();
     UART2_Init(115200); //Init UART at 115200 BPS
-    Delay_ms(100);// Wait for UART to stabilize
+    Delay_ms(100);
 }
-/* Method to parse the JSON object*/
 void parseJson(const char *JSON_STRING){
      int i = 0, r = 0, j= 0;
      jsmn_parser parser;
